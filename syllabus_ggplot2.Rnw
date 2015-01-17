@@ -1,0 +1,160 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\usepackage{pst-eucl,pstricks,pstricks-add}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{color}
+\usepackage{url}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{setspace}
+%\doublespace %para doble espacio
+\onehalfspace %para espacio y medio
+\newcommand{\code}[1]{\fcolorbox{blue!80}{gray!10}{#1}}
+\parindent=0mm
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\begin{minipage}[d]{110mm}
+\includegraphics[scale=.50]{logo_source.png}
+\end{minipage}
+\begin{minipage}[d]{50mm}
+\textsf{\textbf{\sc \tiny QUITO: Fernando Oviedo E8-65 y José Barba,}}\\
+\textsf{\textbf{\sc \tiny \qquad Sector: El Dorado}}\\
+\textsf{\textbf{\sc \tiny Contacto: (02) 2 559 703 / (593) 0998890021}}
+\end{minipage}\\
+\vspace{0.6cm}
+%\rule[1mm]{150mm}{0.5mm}
+
+\section{Quiénes somos ?}
+
+Source Stat Lab (SSL) es una empresa Ecuatoriana con sede en Quito especializada en fomentar el avance del conocimiento, misma que presta sus servicios de entrenamiento y capacitación en el lenguaje de programación R para profesionales en todas sus verticales (investigación, docencia, empresarial). SSL brinda capacitación, reportería y consultoría estadística/matemática con el uso de herramientas de software libre como: R, RStudio, R Analytic Flow $\&$ LaTeX a empresas globales y locales, así como instituciones públicas.
+
+\section{Historia}
+
+SSL nació en Septiembre 2014 con el propósito de dar servicio y asesoramiento en investigaciones aplicadas que requieran de estudios estadísticos/matemáticos asociados a las mismas.
+
+\section{Objetivos}
+
+Entre los objetivos de SSL se encuentran:
+\begin{itemize}
+  \item Potenciar las actividades relacionadas con la Estadística que se llevan a cabo en varias universidades Ecuatorianas, así como ofrecer asesoramiento estadístico tanto a grupos de investigación como a particulares y empresas.  Dicho asesoramiento se complementa con cursos de formación adaptados a las necesidades y requerimientos del usuario.
+  \item Fomentar el uso del software estadístico R en actividades académicas, profesionales e investigación.  
+\end{itemize}
+ 
+
+\section{Cursos}
+
+Durante los últimos años, las nuevas tecnologías han permitido generar, almacenar y difundir grandes cantidades de información. Para poder extraer conocimiento y generar valor, hacen falta herramientas analíticas.\newline
+
+Dado que la estadística es la herramienta determinante para la toma de decisiones y la obtención de conocimiento, SSL ofrece los siguientes cursos:
+\begin{itemize}
+  \item R Nivel Básico
+  \item R Nivel Intermedio
+  \item R Nivel Avanzado
+  \item Gráficos con ggplot2
+  \item Interfaces Web con Shiny
+  \item Reportería Dinámica
+%  \item Series Temporales
+%  \item Minería de datos
+%  \item Modelos lineales y de riesgo
+\end{itemize}
+
+
+\newpage
+
+
+\begin{center}
+{\bf \Large Gráficos estadísticos con ggplot2}
+\end{center}
+
+
+{\bf \large Descripción:}\newline
+
+ggplot2 es en la actualidad, uno de los paquetes de R más utilizados en la generación de gráficos estadísticos muy elaborados y de extremada calidad, la ventaja principal que presenta a diferencia de otros programas, es la utilización de un lenguaje estándar para describir la forma de como visualizaremos gráficamente nuestro conjunto de datos (grámatica de gráficos), el conocer la gramática de los gráficos es muy importante pues nos permite conocer como mejorar la presentación de gráficos estándares y como generar gráficos totalmente nuevos.\newline
+
+Entre los gráficos estadásticos más empleados generados con ggplot2 podemos enumerar los siguientes, histogramas, digramas de densidad, de caja-bigotes, de barras, de pastel, de dispersión, etc, adicionalmente podemos crear gráficos de mapas en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial).\newline
+ 
+  
+{\bf \large Duración:}\newline
+
+  20 Hrs.\newline
+  
+{\bf \large Requisitos:}\newline
+  
+  R nivel básico.\newline
+  
+{\bf \large Contenidos del curso:}
+
+
+\begin{enumerate}
+\item{Introducción e Instalación del paquete.}
+
+\item{La gramática de los gráficos ggplot2.}
+\begin{enumerate}
+\item[2.1]{Generación el primer gráfico ggplot2.}
+\end{enumerate}
+
+\item{Gráficos de distribución}
+\begin{enumerate}
+\item[3.1]{Histogramas.}
+\item[3.2]{Curvas de densidad.}
+\item[3.3]{Diagrama de caja-bigotes.}
+\item[3.4]{Multiples gráficos de distribución.} Se genera los gráficos enumerados anteriormente pero esta vez para los distintos suconjuntos en los que se puede dividir la data original.
+\end{enumerate}
+
+\item{Gráficos de lineas}
+\begin{enumerate}
+\item[4.1]{Gráfico de linea básico.}
+\item[4.2]{Gráfico de lineas múltiples.}
+\item[4.3]{Modificación de apariencia de la linea (color, estilo, forma, etc).}
+\end{enumerate}
+
+\item{Gráficos de dispersión}
+\begin{enumerate}
+\item[5.1]{Gráfico de dispersión básico.}
+\item[5.2]{Agrupación puntos con color, forma, etc.}
+\item[5.3]{Adición de lineas de ajuste de modelos de regresión.}
+\end{enumerate}
+
+\item{Mapas geográficos}
+\begin{enumerate}
+\item[6.1]{Gráfico de mapa geografico básico.}
+\item[6.2]{Adición de color, tipo de linea, etc. para cada provincia.}
+\item[6.3]{Adición de resúmenes estadísticos por región, provincia, etc.}
+\item[6.3]{Adición de escalas de color (por ejemplo población analfabeta por región, provincia, etc.)}
+\end{enumerate}
+
+\item{Formato del gráfico}
+\begin{enumerate}
+\item[7.1]{Modificación de escala, color, letra, etc. de ejes.}
+\item[7.2]{Modificación de posisión, color, letra, etc. de legendas.}
+\item[7.3]{Modificación de margenes, color de fondo.}
+\end{enumerate}
+
+\item{Color en gráficos}
+\begin{enumerate}
+\item[8.1]{Escala discreta de colores.}
+\item[8.2]{Escala continua de colores.}
+\end{enumerate}
+
+\item{Facetas}
+\begin{enumerate}
+\item[9.1]{Generación de gráficos por subgrupo de la data (variable discreta).}
+\item[9.2]{Generación de gráficos por dos subgrupos de la data (dos variables discretas).}
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\end{document}
