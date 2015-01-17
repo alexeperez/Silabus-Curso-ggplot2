@@ -79,11 +79,20 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 
 {\bf \large Descripción:}\newline
 
-ggplot2 es en la actualidad, uno de los paquetes de R más utilizados en la generación de gráficos estadísticos muy elaborados y de extremada calidad, la ventaja principal que presenta a diferencia de otros programas, es la utilización de un lenguaje estándar para describir la forma de como visualizaremos gráficamente nuestro conjunto de datos (grámatica de gráficos), el conocer la gramática de los gráficos es muy importante pues nos permite conocer como mejorar la presentación de gráficos estándares y como generar gráficos totalmente nuevos.\newline
+El objetivo del curso gráficos con {\bf ggplot2} es proporcionar al estudiante las principales herramientas empleadas en la generación de gráficos estadísticos muy elaborados y de extremada calidad mediante el uso del R-paquete ggplot2, el mismo que es en la actualidad uno de los paquetes gráficos de R más utilizados, la ventaja principal que presenta a diferencia de otros programas, es la utilización de un lenguaje estándar para describir la forma de como visualizaremos gráficamente un conjunto de datos determinado (grámatica de gráficos), conocer la {\bf gramática de los gráficos} permite optimizar la presentación de gráficos estándares y generar gráficos totalmente nuevos e innovadores.
 
-Entre los gráficos estadásticos más empleados generados con ggplot2 podemos enumerar los siguientes, histogramas, digramas de densidad, de caja-bigotes, de barras, de pastel, de dispersión, etc, adicionalmente podemos crear gráficos de mapas en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial).\newline
- 
-  
+\begin{figure}[H]
+\begin{center}
+    \includegraphics[width=0.41\textwidth]{DiagCajasSPSS.png}
+    \includegraphics[width=0.55\textwidth]{DiagCajas.png}
+  \caption{Diagrama de cajas SPSS vs ggplot2.}
+  \label{spssyg2}
+\end{center}
+\end{figure}
+
+Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes, histogramas, digramas de densidad, de caja-bigotes, de barras, de pastel, de dispersión, etc, adicionalmente podemos crear gráficos de {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). Mediante las Figuras 1 se presenta un claro ejemplo de la calidad de un gráfico {\bf ggplot2} comparandola con la obtenida mediante el uso del programa estadístico clásico SPSS.\newline
+
+
 {\bf \large Duración:}\newline
 
   20 Hrs.\newline
