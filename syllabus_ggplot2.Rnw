@@ -79,7 +79,7 @@ Dado que la estadística es la herramienta determinante para la toma de decision
 
 {\bf \large Descripción:}\newline
 
-El objetivo del curso gráficos con {\bf ggplot2} es proporcionar al estudiante las principales herramientas empleadas en la generación de gráficos estadísticos muy elaborados y de extremada calidad mediante el uso del R-paquete ggplot2, el mismo que es en la actualidad uno de los paquetes gráficos de R más utilizados, la ventaja principal que presenta a diferencia de otros programas, es la utilización de un lenguaje estándar para describir la forma de como visualizaremos gráficamente un conjunto de datos determinado (grámatica de gráficos), conocer la {\bf gramática de los gráficos} permite optimizar la presentación de gráficos estándares y generar gráficos totalmente nuevos e innovadores.
+El objetivo del curso gráficos con {\bf ggplot2} es dotar al estudiante de importantes herramientas empleadas en la generación de gráficos estadísticos de alta calidad y complejidad a través del paquete ggplot2, mismo que en la actualidad es uno de los paquetes gráficos de R más utilizados, la principal ventaja que presenta a diferencia de otros programas es la utilización de un lenguaje estándar que permite describir la forma de visualización de manera sencilla (grámatica de gráficos), conocer la {\bf gramática de los gráficos} permite optimizar la presentación de gráficos estándares y generar gráficos totalmente nuevos e innovadores.
 
 \begin{figure}[H]
 \begin{center}
@@ -90,8 +90,12 @@ El objetivo del curso gráficos con {\bf ggplot2} es proporcionar al estudiante 
 \end{center}
 \end{figure}
 
-Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes, histogramas, digramas de densidad, de caja-bigotes, de barras, de pastel, de dispersión, etc, adicionalmente podemos crear gráficos de {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). Mediante las Figuras 1 se presenta un claro ejemplo de la calidad de un gráfico {\bf ggplot2} comparandola con la obtenida mediante el uso del programa estadístico clásico SPSS.\newline
+%paquete multicols
+%\begin{multicols}{3}[Fragmento del Quijote]
+%Texto...
+%\end{multicols}
 
+Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar los siguientes: histogramas, diagramas de densidad, de cajas y bigotes, de barras, de pastel, de dispersión, etc, adicionalmente, podemos crear {\bf mapas geográficos} en los cuales es posible presentar resúmenes estadísticos por región, provincia, etc (Estadística espacial). En la Figura 1 se muestra un claro ejemplo de la diferencia entre la calidad de un gráfico {\bf ggplot2} y la calidad de un gráfico realizado a través del programa estadístico clásico SPSS.\newline
 
 {\bf \large Duración:}\newline
 
