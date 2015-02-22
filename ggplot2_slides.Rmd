@@ -42,22 +42,6 @@ ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=weightLb)) +
 ```
 
 
-```{r, echo=FALSE, fig.width=3,fig.height=3}
-options(warn=-1)
-library(lattice)
-library(gcookbook)
-xyplot(heightIn~ageYear,heightweight,pch=16)
-```
-
-```{r, echo=FALSE, fig.width=3,fig.height=3}
-options(warn=-1)
-library(ggplot2)
-library(gcookbook)
-ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=weightLb)) +
-        geom_point(size=3.5, shape=20)
-```
-
-
 ## <b> <font color=SteelBlue face=Cambria size=7> Sistema gráfico "base" </font> </b>
 
 Se basa en la utilización de los paquetes:
@@ -79,7 +63,7 @@ Características:
 
 ## <b> <font color=SteelBlue face=Cambria size=7> Ejemplo </font> </b>
 
-```{r, fig.width=5, fig.height= 4.5, fig.align='center'}
+```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
 with(airquality, plot(Wind, Ozone, main = "Ozone vs Wind", type = "n"))
 with(subset(airquality, Month <= 6), points(Wind, Ozone, col = "red", pch=16))
 with(subset(airquality, Month > 6), points(Wind, Ozone, col = "blue", pch=16))
@@ -153,9 +137,39 @@ library(ggplot2)
 
 
 
+## <b> <font color=SteelBlue face=Cambria size=7> Generación el primer gráfico ggplot2 </font> </b>
+
+```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
+library(ggplot2)
+g <- ggplot(mtcars, aes(x=wt, y=mpg))
+g + geom_point()
+```
+
+## <b> <font color=SteelBlue face=Cambria size=7> Histogramas </font> </b>
+```{r, echo=FALSE}
+options(warn = -1)
+```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
+library(ggplot2)
+g <- ggplot(mtcars, aes(x=mpg))
+g + geom_histogram(binwidth=3)
+```
+
+## <b> <font color=SteelBlue face=Cambria size=7> Curvas de densidad </font> </b>
 
 
+## <b> <font color=SteelBlue face=Cambria size=7> Diagrama de caja-bigotes </font> </b>
+```{r, fig.width=4, fig.height= 3.5, fig.align='center'}
+library(ggplot2)
+g <- ggplot(PlantGrowth, aes(x=TRUE, y=weight)) 
+g + geom_boxplot(width=0.5)
+```
 
+## <b> <font color=SteelBlue face=Cambria size=7> Múltiples gráficos de distribución. </font> </b>
+```{r, fig.width=4, fig.height= 3.5, fig.align='center'}
+library(ggplot2)
+g <- ggplot(PlantGrowth, aes(x=group, y=weight)) 
+g + geom_boxplot(width=0.5)
+```
 
 
 
