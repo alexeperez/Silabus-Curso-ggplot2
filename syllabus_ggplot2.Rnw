@@ -121,7 +121,8 @@ Entre los gráficos estadísticos generados con {\bf ggplot2} podemos enumerar l
 \item[3.1]{Histogramas.}
 \item[3.2]{Curvas de densidad.}
 \item[3.3]{Diagrama de caja-bigotes.}
-\item[3.4]{Multiples gráficos de distribución.} Se genera los gráficos enumerados anteriormente pero esta vez para los distintos suconjuntos en los que se puede dividir la data original.
+\item[3.4]{Diagrama de barras.}
+\item[3.5]{Múltiples gráficos de distribución.} Se genera los gráficos enumerados anteriormente pero esta vez para los distintos suconjuntos en los que se puede dividir la data original.
 \end{enumerate}
 
 \item{Gráficos de lineas}
