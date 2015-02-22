@@ -12,10 +12,54 @@ output:
     slidy_presentation: default
 ---
 
-## Sistemas gráficos de R
-Actualmente R maneja tres tipos de sistemas de gráficos estadísticos, entre ellos el "base", "lattice", "ggplot2".
+## <b> <font color=SteelBlue face=Cambria size=7> Sistemas gráficos de R </font> </b>
+R actualmente constituye una de las principales herramientas empleada en la generación de gráficos estadísticos de alta calidad y complejidad. Presenta características muy superiores a los clásicos softwares estadísticos generalmente utilizados.
 
-## Sistema gráfico base
+Actualmente R dispone de tres tipos de sistemas (R-paquetes) gráficos, entre ellos tenemos:
+
+- <b> <font color=SteelBlue face=Cambria size=5> base </font> </b>
+- <b> <font color=SteelBlue face=Cambria size=5> lattice </font> </b>
+- <b> <font color=SteelBlue face=Cambria size=5> ggplot2 </font> </b>
+
+```{r, echo=FALSE, fig.width=2.75,fig.height=3}
+options(warn=-1)
+library(gcookbook)
+par(mar=c(4,4,2,2))
+with(heightweight, plot(x=ageYear, y=heightIn,pch=20,col="blue",cex=0.9))
+
+```{r, echo=FALSE, fig.width=2.75,fig.height=3}
+options(warn=-1)
+library(lattice)
+library(gcookbook)
+xyplot(heightIn~ageYear,heightweight,pch=16)
+
+```{r, echo=FALSE, fig.width=4,fig.height=2.75}
+options(warn=-1)
+library(ggplot2)
+library(gcookbook)
+ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=weightLb)) +
+        geom_point(size=3, shape=20)
+```
+
+
+```{r, echo=FALSE, fig.width=3,fig.height=3}
+options(warn=-1)
+library(lattice)
+library(gcookbook)
+xyplot(heightIn~ageYear,heightweight,pch=16)
+```
+
+```{r, echo=FALSE, fig.width=3,fig.height=3}
+options(warn=-1)
+library(ggplot2)
+library(gcookbook)
+ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=weightLb)) +
+        geom_point(size=3.5, shape=20)
+```
+
+
+## <b> <font color=SteelBlue face=Cambria size=7> Sistema gráfico "base" </font> </b>
+
 Se basa en la utilización de los paquetes:
 
 * graphics. Funciones gráficas `hist()`, `plot()`, etc.
@@ -33,7 +77,8 @@ Características:
 * Una vez empezado el gráfico no es posible volver al inicio
 * Permite fijar inicialmente layouts (margenes, espacios, etc) a través de la función `par()`
 
-## Ejemplo
+## <b> <font color=SteelBlue face=Cambria size=7> Ejemplo </font> </b>
+
 ```{r, fig.width=5, fig.height= 4.5, fig.align='center'}
 with(airquality, plot(Wind, Ozone, main = "Ozone vs Wind", type = "n"))
 with(subset(airquality, Month <= 6), points(Wind, Ozone, col = "red", pch=16))
@@ -43,7 +88,7 @@ abline(model, lwd = 1, col= "green")
 legend("topright", pch = 16, col = c("blue", "red"),legend = c("Semestre 2", "Semestre 1"))
 ```
 
-## Facetas
+## <b> <font color=SteelBlue face=Cambria size=7> Facetas </font> </b>
 ```{r, fig.width=7.5, fig.height= 3.5, fig.align='center'}
 par(mfrow=c(1,2))
 with(subset(airquality, Month <= 6), 
@@ -57,8 +102,7 @@ model2 <- lm(Ozone ~ Wind, subset(airquality, Month > 6))
 abline(model2, lwd = 1, col= "green") 
 ```
 
-
-## Sistema gráfico lattice
+## <b> <font color=SteelBlue face=Cambria size=7> Sistema gráfico "lattice" </font> </b>
 
 Se basa en la utilización de los paquetes:
 
@@ -71,8 +115,7 @@ Características:
 * Llamado de una sola función.
 * Layouts (margenes, espacios, etc) se fijan automáticamente
 
-## Ejemplo
-
+## <b> <font color=SteelBlue face=Cambria size=7> Ejemplo </font> </b>
 ```{r, fig.width=7.5, fig.height= 3.5, fig.align='center'}
 library(lattice)
 airquality <- transform(airquality, Month = as.factor (Month))
@@ -83,16 +126,20 @@ graf <- xyplot(Ozone~Wind | Month, data = airquality, layout=c(5,1),
 print(graf)
 ```
 
-## Sistema de gráficos ggplot2
+## <b> <font color=SteelBlue face=Cambria size=7> Sistema gráfico "ggplot2" </font> </b>
 
-ggplot2 es el sistema de gráficos resultante de la combinación de las características del sistema **base** y del sistema **lattice**.
-Fue desarrollado por Hadley Wickham (<http://had.co.nz/>) como una implementación de la __grámatica de gráficos__ (_Grammar of Graphics_) propuesta por Leland  Wilkinson.
+ggplot2 es el sistema de gráficos resultante de la combinación de las 
+características de los sistemas **base** y **lattice**.
+Fue desarrollado por Hadley Wickham (<http://had.co.nz/>) como una 
+implementación de la __grámatica de gráficos__ (_Grammar of Graphics_)
+propuesta por Leland  Wilkinson.
 
 <br>
-<div align=center> <b> <font color=SteelBlue face=Cambria size=8> base + lattice = ggplot2 </font> </b> </div>
+<div align=center> <b> <font color=SteelBlue face=Cambria size=7> base + lattice = ggplot2 </font> </b> </div>
 
 <br>
-ggplot2 se encuentra disponible en <http://cran.r-project.org/web/packages/ggplot2/index.html>, y se puede instalar directamente ejecutando la linea de código siguiente.
+ggplot2 se encuentra disponible en <http://cran.r-project.org/web/packages/ggplot2/index.html>, se puede instalar y caragar en el área de trabajo directamente ejecutando 
+las lineas de código siguiente.
 
 <br>
 ```{r, eval=FALSE}
@@ -100,7 +147,8 @@ install.packages("ggplot2", dependencies=TRUE)
 library(ggplot2)
 ```
 
-## Gramática de gráficos.
+## <b> <font color=SteelBlue face=Cambria size=7> Gramática de gráficos </font> </b>
+
 
 
 
