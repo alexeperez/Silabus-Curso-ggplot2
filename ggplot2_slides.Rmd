@@ -136,12 +136,11 @@ library(ggplot2)
 
 
 
-
 ## <b> <font color=SteelBlue face=Cambria size=7> Generación el primer gráfico ggplot2 </font> </b>
 
 ```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
 library(ggplot2)
-g <- ggplot(mtcars, aes(x=wt, y=mpg))
+g <- ggplot(mpg, aes(x=displ, y=hwy, color=drv))
 g + geom_point()
 ```
 
@@ -150,28 +149,32 @@ g + geom_point()
 options(warn = -1)
 ```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
 library(ggplot2)
-g <- ggplot(mtcars, aes(x=mpg))
-g + geom_histogram(binwidth=3)
+g <- ggplot(mpg, aes(x=displ, fill=drv))
+g + geom_histogram(binwidth=0.5, alpha=0.8)
 ```
 
 ## <b> <font color=SteelBlue face=Cambria size=7> Curvas de densidad </font> </b>
-
+```{r, echo=FALSE}
+options(warn = -1)
+```{r, fig.width=4.5, fig.height= 4, fig.align='center'}
+library(ggplot2)
+g <- ggplot(mpg, aes(x=displ, fill=drv))
+g + geom_density(alpha=0.8, colour=NA) + xlim(c(0, 8))
+```
 
 ## <b> <font color=SteelBlue face=Cambria size=7> Diagrama de caja-bigotes </font> </b>
 ```{r, fig.width=4, fig.height= 3.5, fig.align='center'}
 library(ggplot2)
-g <- ggplot(PlantGrowth, aes(x=TRUE, y=weight)) 
-g + geom_boxplot(width=0.5)
+g <- ggplot(mpg, aes(x=TRUE, y=hwy)) 
+g + geom_boxplot(width=0.5, fill="cyan")
 ```
 
 ## <b> <font color=SteelBlue face=Cambria size=7> Múltiples gráficos de distribución. </font> </b>
 ```{r, fig.width=4, fig.height= 3.5, fig.align='center'}
 library(ggplot2)
-g <- ggplot(PlantGrowth, aes(x=group, y=weight)) 
+g <- ggplot(mpg, aes(x=drv, y=hwy, fill=drv)) 
 g + geom_boxplot(width=0.5)
 ```
-
-
 
 
 
