@@ -169,8 +169,8 @@ g <- ggplot(mpg, aes(x=TRUE, y=hwy))
 g + geom_boxplot(width=0.5, fill="cyan")
 ```
 
-## <b> <font color=SteelBlue face=Cambria size=7> Múltiples gráficos de distribución. </font> </b>
-```{r, fig.width=4, fig.height= 3.5, fig.align='center'}
+## <b> <font color=SteelBlue face=Cambria size=7> Gráficos múltiples de distribución. </font> </b>
+```{r, fig.width=5, fig.height= 3.5, fig.align='center'}
 library(ggplot2)
 g <- ggplot(mpg, aes(x=drv, y=hwy, fill=drv)) 
 g + geom_boxplot(width=0.5)
